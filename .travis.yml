@@ -5,8 +5,9 @@ services:
 - mongodb
 cache:
   directories:
-    - node_modules
-    - plugins
+    - app/node_modules
+    - frontend/node_modules
+    - app/plugins
 deploy:
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY

@@ -4,9 +4,6 @@
   "version": "0.1.0",
   "description": "A Strapi application.",
   "main": "./server.js",
-  "scripts": {
-    "preinstall": "scripts/preinstall.sh"
-  },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "eslint": "^3.12.2",
