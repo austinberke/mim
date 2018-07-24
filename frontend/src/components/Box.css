@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Bariol-Regular-Italic';
+  font-style: italic;
+  src:
+    local('Bariol Regular Italic'),
+    url(/fonts/Bariol_Regular_Italic.otf) format('opentype');
+}
+
+.Box {
+  max-width: 50em;
+  background-color: #222;
+  color: white;
+  line-height: 1.5em;
+  padding: 1em;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.BoxTitle {
+  font-family: 'Bariol-Regular-Italic', Helvetica, Arial, sans-serif;
+  font-size: 25pt;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  margin: 0.5em;
+}
+
+h2 {
+  font-family: 'Bariol-Regular-Italic', Helvetica, Arial, sans-serif;
+  font-size: 18pt;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  margin: 0.5em;
+}
+
+.leaderboard {
+  display: block;
+  font-size: 14pt;
+  text-decoration: underline;
+  color: black;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.leaderboard:hover {
+  background-color: rgba(254,204,53,1);
+}
+
+.register {
+  display: block;
+  font-size: 14pt;
+  text-decoration: underline;
+  color: black;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.register:hover {
+  background-color: rgba(255,57,146,1);
+}

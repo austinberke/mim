@@ -1,0 +1,13 @@
+{
+  "graphql": {
+    "enabled": true,
+    "route": "/graphql"
+  },
+
+  "views": {
+    "map": {
+      "html": "ejs"
+    },
+    "default": "html"
+  }
+}
