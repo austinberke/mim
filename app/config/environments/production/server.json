@@ -6,5 +6,15 @@
   },
   "cron": {
     "enabled": false
+  },
+  "admin": {
+    "path": "/my",
+    "build": {
+      "host": "/",
+      "backend": "localhost",
+      "plugins": {
+        "source": "backend"
+      }
+    }
   }
 }
