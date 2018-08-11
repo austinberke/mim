@@ -1,6 +1,0 @@
-{
-  "graphql": {
-    "enabled": true,
-    "route": "/graphql"
-  }
-}

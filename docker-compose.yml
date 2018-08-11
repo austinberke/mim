@@ -12,6 +12,9 @@ services:
     container_name: app
     restart: always
     build: .
+    environment:
+      - NODE_ENV=production
+      - DATABASE_HOST=mongo
     ports:
       - "1337:1337"
     links:

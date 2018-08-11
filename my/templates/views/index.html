@@ -1,0 +1,20 @@
+{% extends "layouts/default.html" %}
+
+{% macro homepageContent(content) %}
+<div class="post">
+	<h2>{{ content.title }}</h2>
+	<p>{{ content.content | safe }}</p>
+</div>
+{% endmacro %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-md-9">
+			<div class="blog">
+				{% for content in data.contents.results %} {{ homepageContent(content) }} {% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
