@@ -23,7 +23,7 @@ keystone.init({
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'Member',
+	'user model': 'User',
 });
 keystone.import('models');
 keystone.set('locals', {
@@ -35,9 +35,8 @@ keystone.set('locals', {
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
-	homepageContent: 'homepageContent',
-	enquiries: 'enquiries',
-	members: 'members',
+	content: 'HomepageContent',
+	users: ['User', 'UserGroup']
 });
 
 
