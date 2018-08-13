@@ -8,7 +8,6 @@ var Types = keystone.Field.Types;
 
 var HomepageContent = new keystone.List('HomepageContent', {
 	map: { name: 'title' },
-	plural: 'Homepage Content'
 });
 
 HomepageContent.add({

@@ -62,6 +62,7 @@
 							{% if user %}
 								{% if user.canAccessKeystone %}
 								<li><a href="/keystone">Open Keystone</a></li>
+								<li>Permissions: {{permissions}}</li>
 								{% endif %}
 								<li><a href="/keystone/signout">Sign Out</a></li>
 							{% else %}

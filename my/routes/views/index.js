@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var User = keystone.list('User');
 
 exports = module.exports = function (req, res) {
 
@@ -10,13 +11,23 @@ exports = module.exports = function (req, res) {
 	locals.section = 'home';
 
 	locals.data = {
-		contents: [],
+		contents: []
 	};
 
-	// Load the posts
+	// Grab permissions from User Group
+	view.on('init', function (next) {
+		var q = User.model.findById(req.user.id).populate('group');
+
+		q.exec(function (err, results) {
+			locals.permissions = results.group.permissions;
+			next(err);
+		});
+	});
+
+	// Initialize page data
 	view.on('init', function (next) {
 
-		var q = keystone.list('homepageContent').paginate({
+		var q = keystone.list('HomepageContent').paginate({
 			page: req.query.page || 1,
 			perPage: 10,
 			maxPages: 10,
@@ -27,6 +38,10 @@ exports = module.exports = function (req, res) {
 			locals.data.contents = results;
 			next(err);
 		});
+
+		if (locals.currentUserGroup) {
+			locals.currentUserPermissions = locals.currentUserGroup.permissions;
+		}
 	});
 
 	// Render the view

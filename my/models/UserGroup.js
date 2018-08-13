@@ -24,5 +24,5 @@ UserGroup.relationship({ ref: 'User', path: 'user', refPath: 'group' });
 /**
  * Registration
  */
-UserGroup.defaultColumns = 'name, value';
+UserGroup.defaultColumns = 'name, value, permissions';
 UserGroup.register();

@@ -11,17 +11,18 @@ User.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, unique: true, index: true },
 	password: { type: Types.Password, initial: true, required: true },
-	groupRef: { type: Types.Relationship, ref: 'UserGroup', required: false }
+	group: { type: Types.Relationship, ref: 'UserGroup', index: true },
+	isAdmin: { type: Types.Boolean, hidden: true, noedit: true }
 });
 
 
 // Provide access to Keystone
 User.schema.virtual('canAccessKeystone').get(function () {
-	return true;
+	return this.isAdmin;
 });
 
 /**
  * Registration
  */
-User.defaultColumns = 'name, email';
+User.defaultColumns = 'name, email, group';
 User.register();
