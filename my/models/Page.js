@@ -2,15 +2,15 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * Homepage Content Model
+ * Page Model
  * ==========
  */
 
-var HomepageContent = new keystone.List('HomepageContent', {
+var Page = new keystone.List('Page', {
 	map: { name: 'title' },
 });
 
-HomepageContent.add({
+Page.add({
 	title: { type: String, required: true },
 	content: {
 		type: Types.Html,
@@ -20,8 +20,8 @@ HomepageContent.add({
 	order: { type: String }
 });
 
-HomepageContent.schema.virtual('content.full').get(function () {
+Page.schema.virtual('content.full').get(function () {
 	return this.content;
 });
 
-HomepageContent.register();
+Page.register();
