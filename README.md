@@ -12,7 +12,7 @@ The application is built on [KeystoneJS](https://keystonejs.com/), a Node.js fra
 
 The basic model of the application is below. Note that 'Admin' Member Group is equivalent to the 'isAdmin' distinction in KeystoneJS.
 
-![model](https://i.imgur.com/uLvF2To.png)
+![model](https://i.imgur.com/K4IVGB4.png)
 
 ## Timeline
 Components #1-3 are planned to be finished by the beginning of the Fall 2018 quarter (End of September). Currently working on:
